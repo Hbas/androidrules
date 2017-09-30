@@ -4,11 +4,12 @@
 
 	<groupId>com.github.hbas</groupId>
 	<artifactId>rules</artifactId>
-	<version>0.0.1</version>
+	<version>0.1.0</version>
 	<packaging>jar</packaging>
 
 	<name>rules</name>
 	<url>http://github.com/Hbas/rules</url>
+	<description>A simple rule engine in Java, compatible with the Android OS</description>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
