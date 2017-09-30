@@ -4,11 +4,11 @@ Android Rules is a simple yet powerful Java rules engine, compatible with the An
 
 - Lightweight framework and easy to learn API
 - Useful abstractions to programatically define business rules and apply them easily
-- Forward-chaining breadth-first rule evaluation, to allow rules 
+- Forward-chaining breadth-first rule evaluation. Forward chaining is a popular implementation strategy for expert systems, business and production rule systems.
 
 ## Installation
 
-### Maven
+### Maven (SOON) 
 ```
 <dependency>
     <groupId>com.github.hbas</groupId>

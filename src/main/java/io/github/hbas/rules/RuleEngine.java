@@ -5,14 +5,14 @@ import java.util.List;
 
 public class RuleEngine {
 
-	private List<RuleExecutor> rules = new ArrayList<>();
+	private List<RuleExecutor> rules = new ArrayList<RuleExecutor>();
 
 	public void fire(Facts facts) {
 		for (RuleExecutor rule : rules) {
 			rule.resetExecutions();
 		}
 		
-		List<RuleExecutor> rulesToRun = new ArrayList<>(rules.size());
+		List<RuleExecutor> rulesToRun = new ArrayList<RuleExecutor>(rules.size());
 		do {
 			rulesToRun.clear();
 			for (RuleExecutor rule : rules) {

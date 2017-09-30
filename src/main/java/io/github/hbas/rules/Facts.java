@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Facts {
-	private Map<String, Object> facts = new HashMap<>();
+	private Map<String, Object> facts = new HashMap<String, Object>();
 
 	public Facts put(String key, Object value) {
 		this.facts.put(key, value);
