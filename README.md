@@ -33,7 +33,7 @@ dependencies {
 
 ## Versions
 
-For versioning information, please refer to [Semantic Versioning 2.0] (http://semver.org/spec/v2.0.0.html)
+For versioning information, please refer to [Semantic Versioning 2.0](http://semver.org/spec/v2.0.0.html)
 
 ## Licensing
 
