@@ -9,6 +9,7 @@
 
 	<name>rules</name>
 	<url>http://github.com/Hbas/rules</url>
+	<description>A simple rule engine in Java, compatible with the Android OS</description>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
