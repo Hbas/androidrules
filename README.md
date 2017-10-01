@@ -13,7 +13,7 @@ Android Rules is a simple yet powerful Java rules engine, compatible with the An
 <dependency>
     <groupId>com.github.hbas</groupId>
     <artifactId>androidrules</artifactId>
-    <version>0.1.0</version>
+    <version>0.2.0</version>
 </dependency>
 ```
 
@@ -25,15 +25,19 @@ Add a dependency to your .gradle file:
 dependencies {
     ...
     
-    compile 'com.github.hbas:rules:0.1.0'
+    compile 'com.github.hbas:rules:0.2.0'
     
     ...
 }
 ```
 
+## Usage
+
+To be written. Soon... ;)
+
 ## Versions
 
-For versioning information, please refer to [Semantic Versioning 2.0](http://semver.org/spec/v2.0.0.html)
+For versioning information, please refer to [Semantic Versioning 2.0] (http://semver.org/spec/v2.0.0.html)
 
 ## Licensing
 
