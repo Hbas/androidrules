@@ -1,14 +1,15 @@
 package com.github.hbas.rules;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 /**
  * A fact database is a collection of truths (booleans) about the current engine
- * execution
+ * execution.
  * 
  * Facts can be consulted (using the <code>is</code> method) or informed (using
- * the <code>tell</code> method)
+ * the <code>tell</code> and <code>tellAsFalse</code> methods).
  */
 public class FactDatabase {
 
@@ -44,7 +45,17 @@ public class FactDatabase {
 	 *            The name of the fact
 	 * 
 	 */
-	public void isNot(String fact) {
+	public void tellAsFalse(String fact) {
 		factNames.remove(fact);
+	}
+
+	/**
+	 * Lists the facts that are known (may or may not be true)
+	 * 
+	 * @return Facts that are known
+	 * 
+	 */
+	public Collection<String> getFacts() {
+		return factNames;
 	}
 }

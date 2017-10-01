@@ -6,29 +6,29 @@ class RuleExecutor<T extends FactDatabase> {
 	private int maxTimes;
 	private int executions;
 
-	public RuleExecutor(Rule<T> rule) {
+	RuleExecutor(Rule<T> rule) {
 		this(rule, DEFAULT_MAX_RULE_EXECUTIONS);
 	}
 
-	public RuleExecutor(Rule<T> rule, int maxTimes) {
+	RuleExecutor(Rule<T> rule, int maxTimes) {
 		this.rule = rule;
 		this.maxTimes = maxTimes;
 		this.executions = 0;
 	}
 
-	public boolean evaluate(T facts) {
+	boolean evaluate(T facts) {
 		if (executions >= maxTimes) {
 			return false;
 		}
 		return rule.evaluate(facts);
 	}
 
-	public void execute(T facts) {
+	void execute(T facts) {
 		executions++;
 		rule.execute(facts);
 	}
 
-	public void resetExecutions() {
+	void resetExecutions() {
 		executions = 0;
 	}
 

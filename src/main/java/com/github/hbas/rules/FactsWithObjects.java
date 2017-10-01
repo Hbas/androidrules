@@ -1,36 +1,46 @@
 package com.github.hbas.rules;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
 /**
  * FactsWithObjects is a special <code>FactDatabase</code> that also supports
- * parameters
+ * parameters.
+ * 
+ * @see FactDatabase
  */
 public class FactsWithObjects extends FactDatabase {
 	private Map<String, Object> facts = new HashMap<String, Object>();
 
-	public FactsWithObjects put(String key, Object value) {
-		this.facts.put(key, value);
+	/**
+	 * Associates the specified value with the specified fact name. If the fact
+	 * database previously contained a mapping for the name, the old value is
+	 * replaced.
+	 * 
+	 * @param factName
+	 *            The name of the fact
+	 * @param value
+	 *            value to be associated with the specified fact
+	 */
+	public FactsWithObjects put(String factName, Object value) {
+		this.facts.put(factName, value);
 		return this;
 	}
 
+	/**
+	 * Returns the value to which the specified fact is mapped, or {@code null}
+	 * if this map contains no mapping for the fact.
+	 * 
+	 * @param factName
+	 *            The name of the fact
+	 */
 	@SuppressWarnings("unchecked")
-	public <T> T get(Class<T> clazz, String key) {
-		return (T) this.facts.get(key);
+	public <T> T get(Class<T> clazz, String factName) {
+		return (T) this.facts.get(factName);
 	}
 
-	/**
-	 * Checks if a fact is true
-	 * 
-	 * @param key
-	 *            The name of the key
-	 * 
-	 * @return If the given key is <code>true</code>. Otherwise, returns false.
-	 * 
-	 * @throws ClassCastException
-	 *             If the value associated with the given key is not a Boolean.
-	 */
+	@Override
 	public boolean is(String key) {
 		if (!facts.containsKey(key)) {
 			return false;
@@ -42,6 +52,16 @@ public class FactsWithObjects extends FactDatabase {
 	@Override
 	public void tell(String fact) {
 		this.put(fact, Boolean.TRUE);
+	}
+
+	@Override
+	public void tellAsFalse(String fact) {
+		this.put(fact, Boolean.FALSE);
+	}
+
+	@Override
+	public Collection<String> getFacts() {
+		return facts.keySet();
 	}
 
 }

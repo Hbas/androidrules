@@ -14,7 +14,7 @@ public class FactDatabaseTest {
 	public void tellAndCheck() {
 		FactDatabase facts = getFacts();
 		facts.tell("something");
-		facts.isNot("x");
+		facts.tellAsFalse("x");
 		assertTrue(facts.is("something"));
 		assertFalse(facts.is("something else"));
 		assertFalse(facts.is("x"));
